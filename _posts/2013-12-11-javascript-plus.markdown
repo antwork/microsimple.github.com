@@ -66,22 +66,3 @@ function toggle_visibility(className) {
 }
 {% endhighlight %}
   ^_^/，ok，完工~
-{% highlight Properties files %}
-{
-  "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-  "find_selected_text": true,
-  "font_face": "Consolas",
-  "font_size": 12,
-  "ignored_packages":
-  [
-    "Vintage"
-  ],
-  "line_padding_top": 2,
-  "tab_size": 4,
-  "theme": "Centurion.sublime-theme",
-  "translate_tabs_to_spaces": true,
-  "update_check": false,
-  "use_tab_stops": true
-}
-
-{% endhighlight %}
