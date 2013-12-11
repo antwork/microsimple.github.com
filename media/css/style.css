@@ -57,7 +57,7 @@ blockquote, pre code {
   display: block;
   overflow: auto; color:#555;}
 blockquote a{
-  color:yellow !important;
+  color:#888 !important;
 }
 code {
   background-color: #eeeeee;
