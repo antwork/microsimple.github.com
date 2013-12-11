@@ -47,7 +47,7 @@ a, header #header h1 a, article .title a, article .meta .tags a, article .divide
     color: #dd1144; }
 
 blockquote, pre code {
-  background-color: #888;
+  background-color: #eeeeee;
   padding: 0 1em;
   border: 1px dashed #eee !important;
   border-color: #e0e0e0 !important;
@@ -55,15 +55,15 @@ blockquote, pre code {
   font-family: "Consolas", monospace;
   line-height: 1.6;
   display: block;
-  overflow: auto; }
+  overflow: auto; color:#555;}
 blockquote a{
   color:yellow !important;
 }
 code {
-  background-color: #888;
+  background-color: #eeeeee;
   padding: 2px 5px;
   border: 1px dashed #e0e0e0;
-  font-family: "Consolas", monospace;}
+  font-family: "Consolas", monospace;color:#555;}
 
 h1, h2 {
   font-size: 1.4em; }
