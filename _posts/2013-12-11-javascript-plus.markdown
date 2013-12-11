@@ -26,7 +26,7 @@ document.getElementByClass = function(className) {
 {% highlight JavaScript %}
 var nick = document.getElementByClass("user-nick")[0].innerText;  
 {% endhighlight %}
-  好吧，写好后，一开始效果挺爽，但是一个 class 里有多个 className 的时候，就会出现问题，我又去搜了下，然后又改了下代码，如下(via:令狐葱)：
+  好吧，写好后，一开始效果挺爽，但是一个 `class` 里有多个 `className` 的时候，就会出现问题，我又去搜了下，然后又改了下代码，如下(*via:令狐葱*)：
 {% highlight JavaScript %}
 function getElementsByClassName(node,className) {
   if (node.getElementsByClassName) { // use native implementation if available
