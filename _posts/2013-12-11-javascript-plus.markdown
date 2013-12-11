@@ -66,7 +66,7 @@ function toggle_visibility(className) {
 }
 {% endhighlight %}
   ^_^/，ok，完工~
-{% highlight Scheme %}
+{% highlight Properties files %}
 {
   "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
   "find_selected_text": true,
