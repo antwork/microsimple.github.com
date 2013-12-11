@@ -1,0 +1,37 @@
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:day/:title.html
+name: "MicroSimple's Blog"
+time: "2013-12-09"
+markdown: rdiscount
+
+author: "MicroSimple"
+description: "MicroSimple's Blog,记录生活中的点点滴滴,铭刻生命中的些许感动"
+keywords: "MicroSimple's Blog,学习,生活,工作"
+disqus: "microsimple"
+mail: "yy.liu@foxmail.com"
+links: 
+  - title: "Weibo"
+    name: "SinaSimple"
+    url: "http://weibo.com/1842336184"
+  - title: "Github"
+    name: "MicroSimple"
+    url: "http://github.com/MicroSimple"
+
+navigations:
+  - title: 归档
+    class: fa fa-list-ul
+    href: /archive.html
+  - title: 标签
+    class: fa fa-tags
+    href: /tags.html
+  - title: 关于
+    class: fa fa-user
+    href: /about.html
+  - title: 友链
+    class: fa fa-link
+    href: /links.html
+  - title: Subscribe
+    class: fa fa-rss
+    href: /atom.xml
+
