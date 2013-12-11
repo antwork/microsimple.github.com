@@ -7,9 +7,9 @@ tags:
   - JavaScript
   - Code
 ---
-  今天写了应好朋友需求写了个关于设置文章字体大小(大中小)的 [demo](/media/demos/l-m-s-font-size-demo.html)，一开始脑子秀逗了，居然想用原生的 JavaScript 对象 . getElementByClass("ClassName") ，真不知道当时怎么想的，而且还跑到网上去搜索。。。好吧，你们尽情的 bs 吧。
+  今天写了应好朋友需求写了个关于设置文章字体大小(大中小)的 [demo](/media/demos/l-m-s-font-size-demo.html)，一开始脑子秀逗了，居然想用原生的`JavaScript对象.getElementByClass("ClassName")` ，真不知道当时怎么想的，而且还跑到网上去搜索。。。好吧，你们尽情的 bs 吧。
   
-  然后自己写了个getElementByClass，代码如下：
+  然后自己写了个`getElementByClass`，代码如下：
 {% highlight JavaScript %}
 document.getElementByClass = function(className) {  
     var el = [],  
