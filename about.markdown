@@ -12,6 +12,6 @@ layout: page
 > mail: {{site.mail}}
 
 {% for link in site.links %}
-> {{link.title}}: [{{link.name}}]({{link.url}})
+> {{link.title}}: [{{link.name}}]({{link.url}} "{{link.desc}}")
 
 {% endfor %}

@@ -14,9 +14,11 @@ links:
   - title: "Weibo"
     name: "SinaSimple"
     url: "http://weibo.com/1842336184"
+    desc: "我的新浪微博"
   - title: "Github"
     name: "MicroSimple"
     url: "http://github.com/MicroSimple"
+    desc: "我的GitHub"
 
 navigations:
   - title: 归档
