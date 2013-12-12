@@ -8,7 +8,7 @@ tags:
   - Sublime Text
   - 配置文件
 ---
-最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。
+最近迷上了一款文本编辑器`Sublime Text`，[官网](http://www.sublimetext.com/)，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。
 
 安装`Package Control`首先打开`Console`，快捷键：`Ctrl+Esc下面的那个键`，输入如下代码，然后回车(`Sublime Text3 `)
 {% highlight python %}
