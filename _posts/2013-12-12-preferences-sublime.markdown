@@ -3,13 +3,25 @@ title: Sublime Text 的详细配置
 layout: post
 createdate: 2013-12-12 11:10:01
 guid: 2013121201
-description: 最近迷上了一款文本编辑器Sublime Text，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。但是里面的配置文件有点恼火，然后去搜索了下，具体配置
+description: 最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。安装Package Control
 tags:  
   - Sublime Text
   - 配置文件
 ---
 最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。
-但是里面的配置文件有点恼火，然后去搜索了下，具体配置如下`Preferences.sublime`:
+
+安装`Package Control`首先打开`Console`，快捷键：`Ctrl+Esc下面的那个键`，输入如下代码，然后回车(`Sublime Text3 `)
+{% highlight python %}
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+{% endhighlight %}
+
+`Sublime Text 2`代码如下：
+{% highlight python %}
+import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
+{% endhighlight %}
+
+重启软件后，快捷键`Ctrl+Shift+P`就可以打开`Package Control`了，可以在里面安装很多相应的插件。
+接下来就是菜单栏`Preferences>Setting User`配置文件，去搜索了下，具体配置如下`Preferences.sublime`:
 {% highlight java %}
 {
     //主题文件的位置
