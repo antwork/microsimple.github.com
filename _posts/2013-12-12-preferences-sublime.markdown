@@ -9,23 +9,23 @@ tags:
   - 配置文件
 ---
 最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。
-但是里面的配置文件有点恼火，然后去搜索了下，具体配置如下`Preferences.sublime`：
+但是里面的配置文件有点恼火，然后去搜索了下，具体配置如下`Preferences.sublime`:
 {% highlight ruby %}
 
 {
     //主题文件的位置
-    "theme": "Centurion.sublime-theme",
-    "color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+    "theme":"Centurion.sublime-theme",
+    "color_scheme":"Packages/Color Scheme - Default/Monokai.tmTheme",
     //字体
-    "font_face": "Consolas",
+    "font_face":"Consolas",
     //字体大小
-    "font_size": 11.0,
+    "font_size":11.0,
     "ignored_packages":
     [
         "Vintage"
     ],
     //每行code相对于上一行代码的上边距
-    "line_padding_top": 2,
+    "line_padding_top":2,
     //tab键缩进用空格代替
     "translate_tabs_to_spaces":true,
     //tab键制表符宽度
