@@ -2,7 +2,7 @@
 title: About Me
 layout: page
 ---
-[![dream](/media/files/2013/12/09/dream.jpg)](/)
+![dream](/media/files/2013/12/09/dream.jpg)
 如果你想拥有你从未有过的东西
 
 那么你必须去做你从未做过的事情
