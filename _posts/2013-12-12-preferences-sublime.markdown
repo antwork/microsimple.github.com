@@ -3,7 +3,7 @@ title: Sublime Text 的详细配置
 layout: post
 createdate: 2013-12-12 11:10:01
 guid: 2013121201
-description: 最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。但是里面的配置文件有点恼火，然后去搜索了下，具体配置如下`Preferences.sublime`：
+description: "最近迷上了一款文本编辑器Sublime Text，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。但是里面的配置文件有点恼火，然后去搜索了下，具体配置"
 tags:  
   - Sublime Text
   - 配置文件
