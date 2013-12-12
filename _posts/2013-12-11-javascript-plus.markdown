@@ -11,7 +11,7 @@ tags:
   今天写了应好朋友需求写了个关于设置文章字体大小(大中小)的 [demo](/media/demos/l-m-s-font-size-demo.html)，一开始脑子秀逗了，居然想用原生的`JavaScript对象.getElementByClass("ClassName")` ，真不知道当时怎么想的，而且还跑到网上去搜索。。。好吧，你们尽情的 bs 吧。
   
   然后自己写了个`getElementByClass`，代码如下：
-{% highlight JavaScript %}
+{% highlight javascript %}
 document.getElementByClass = function(className) {  
     var el = [],  
     _el = document.getElementsByTagName('*'); 
@@ -24,11 +24,11 @@ document.getElementByClass = function(className) {
 }  
 {% endhighlight %}
   使用方法如下：
-{% highlight JavaScript %}
+{% highlight javascript %}
 var nick = document.getElementByClass("user-nick")[0].innerText;  
 {% endhighlight %}
   好吧，写好后，一开始效果挺爽，但是一个 `class` 里有多个 `className` 的时候，就会出现问题，我又去搜了下，然后又改了下代码，如下(*via:令狐葱*)：
-{% highlight JavaScript %}
+{% highlight javascript %}
 function getElementsByClassName(node,className) {
   if (node.getElementsByClassName) { // use native implementation if available
     return node.getElementsByClassName(className);
@@ -52,7 +52,7 @@ function getElementsByClassName(node,className) {
 }
 {% endhighlight %}
 使用方法：
-{% highlight JavaScript %}
+{% highlight javascript %}
 function toggle_visibility(className) {
    var elements = getElementsByClassName(document, className),
        n = elements.length;
