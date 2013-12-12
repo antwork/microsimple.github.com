@@ -3,7 +3,7 @@ title: 为原生JavaScript添加getElementByClass方法
 layout: post
 createdate: 2013-12-11 13:17:22
 guid: 2013121101
-description: "今天写了应好朋友需求写了个关于设置文章字体大小(大中小)的 demo，一开始脑子秀逗了，居然想用原生的JavaScript对象.getElementByClass("ClassName") ，真不知道当时怎么想的，而且还跑到网上去搜索。。。好吧，你们尽情的 bs 吧。"
+description: 今天写了应好朋友需求写了个关于设置文章字体大小(大中小)的 demo，一开始脑子秀逗了，居然想用原生的JavaScript对象.getElementByClass(ClassName)，真不知道当时怎么想的，而且还跑到网上去搜索。。。好吧，你们尽情的 bs 吧。
 tags:  
   - JavaScript
   - Code
