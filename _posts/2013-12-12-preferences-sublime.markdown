@@ -3,12 +3,12 @@ title: Sublime Text 的详细配置
 layout: post
 createdate: 2013-12-12 11:10:01
 guid: 2013121201
-description: 最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。安装Package Control
+description: 最近迷上了一款文本编辑器`Sublime Text`，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。写这篇文章主要是做个备份。
 tags:  
   - Sublime Text
   - 配置文件
 ---
-最近迷上了一款文本编辑器`Sublime Text`，[官网](http://www.sublimetext.com/)，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。
+最近迷上了一款文本编辑器`Sublime Text`，[官网](http://www.sublimetext.com/ "Sublime Text 官网")，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。写这篇文章主要是做个备份。
 
 安装`Package Control`首先打开`Console`，快捷键：`Ctrl+Esc下面的那个键`，输入如下代码，然后回车(`Sublime Text3 `)
 {% highlight python %}
