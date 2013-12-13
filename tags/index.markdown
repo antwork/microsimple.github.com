@@ -1,5 +1,5 @@
 ---
-title: 文章标签
+title: 标签分类
 layout: page
 ---
 
