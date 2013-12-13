@@ -1,5 +1,5 @@
 ---
-title: Sublime Text 的基础与详细配置
+title: Sublime Text 的简单安装与详细配置
 layout: post
 createdate: 2013-12-12 11:10:01
 guid: 2013121201
@@ -11,7 +11,7 @@ tags:
 最近迷上了一款文本编辑器叫`Sublime Text`，[官网](http://www.sublimetext.com/ "Sublime Text 官网")，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。写这篇文章主要是防止以后到处寻找而做个备份。
 ###一、`Sublime Text`的下载安装
 进入`Sublime Text`的[官网](http://www.sublimetext.com/ "Sublime Text 官网")，下载`Sublime Text`，有2和3版本，请根据自己爱好进行下载安装。
-###`Package Control`的安装
+###二、`Package Control`的安装
 首先打开`Console`>>>快捷键：`Ctrl+Esc下面的那个键`，输入下面的代码，然后回车(请注意软件自身的版本)
 如果是`Sublime Text3`，代码如下：
 {% highlight python %}
@@ -23,12 +23,12 @@ import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.
 import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation')
 {% endhighlight %}
 重启软件即可。
-###二、插件的安装与卸载
+###三、插件的安装与卸载
 1、插件的安装：
 重启软件后，快捷键`Ctrl+Shift+P`就可以打开`Package Control`了，输入关键字`Install Package` + `回车`，会进入插件候选安装界面，输入你要安装的插件名称，如`Emmet`，找到后，回车安装。
 2、插件的卸载：
 打开`Package Control`，输入关键字`Remove Package`+`回车`，会进入插件候选删除界面，输入你要卸载的插件名称，如`Emmet`，找到后，回车卸载。
-###三、Preferences.sublime文件的详细配置
+###四、Preferences.sublime文件的详细配置
 接下来就是>>>菜单栏`Preferences>Setting User`打开`Preferences.sublime`配置文件，去搜索了下，具体配置如下:
 {% highlight java %}
 {
