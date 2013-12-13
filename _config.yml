@@ -23,16 +23,16 @@ links:
 navigations:
   - title: 归档
     class: fa fa-list-ul
-    href: /archive.html
+    href: /archive
   - title: 标签
     class: fa fa-tags
-    href: /tags.html
+    href: /tags
   - title: 关于
     class: fa fa-user
-    href: /about.html
+    href: /about
   - title: 友链
     class: fa fa-link
-    href: /links.html
+    href: /links
   - title: Subscribe
     class: fa fa-rss
     href: /atom.xml
