@@ -1,5 +1,5 @@
 ---
-title: About Me
+title: 关于我
 layout: page
 ---
 ![dream](/media/files/2013/12/09/dream.jpg)
