@@ -103,7 +103,7 @@ title: 我的Blog
     {% endfor %}
 </ul>
 {% endhighlight %}
-这里的`{% for post in site.posts %}`表示对所有的文章进行循环遍历，这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于`{{site.baseurl}}`就是_config.yml中设置的baseurl变量。
+这里的\{\% for post in site.posts \%\}表示对所有的文章进行循环遍历，这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于`{{site.baseurl}}`就是_config.yml中设置的baseurl变量。
 文件夹结构变成：
 > /demo  
 >     |--_config.yml  
