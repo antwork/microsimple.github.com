@@ -51,8 +51,11 @@ hr {
 ::selection {
   color: #fff;
   background-color: #09f; }
-
-a, header #header h1 a, article .title a, article .meta .tags a, article .divider a {
+a[href^="http://"]{
+    background:url(/media/blank.gif) top right no-repeat;
+    padding-right:10px;
+  }
+a, header #header h1 a, article .title a, article .meta .tags a, article .divider a, {
   text-decoration: none;
   color: #bb2222; }
   a:hover, header #header h1 a:hover, article .title a:hover, article .meta .tags a:hover, article .divider a:hover {
@@ -154,10 +157,6 @@ article {
     article .meta .tags header #header h1 a, header #header h1 article .meta .tags a, article .meta .tags a {
       color: #999999;
       padding: .25em; }
-  article .post p a[href^="http://"]{
-    background:url(/media/blank.gif) top right no-repeat;
-    padding-right:10px;
-  }
   article .post img {
     max-width: 680px;
     display: block;
