@@ -12,17 +12,22 @@ tags:
  
 ###一、Github和Jekyll是什么？
 [Github](http://github.com "Github"):是一个具有版本管理功能的代码仓库，每个项目都有一个主页，列出项目的源文件。  
+
 [Github Pages](http://github.io "Github Pages"):对于一个新手来说，看到一大堆源码，只会让人头晕脑涨，不知何处入手。他希望看到的是，一个简明易懂的网页，说明每一步应该怎么做。因此，github就设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，`github Pages可以被认为是用户编写的、托管在github上的静态网页`。github提供模板，允许站内生成网页，但也允许用户自己编写网页，然后上传。有意思的是，这种上传并不是单纯的上传，而是会经过Jekyll程序的再处理。  
+
 `注：若要使用Github Pages，请先注册Github账号 。` 
 
 [Jekyll](http://jekyllrb.com/ "Jekyll"):一个静态站点生成器，它会根据网页源码生成静态文件。它提供了模板、变量、插件等功能，所以实际上可以用来编写整个网站。  
 
 ###二、Git工具的安装和简单使用
 Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。   
-下载安装Git：[点击这里下载](http://git-scm.com/book/en/Getting-Started-Installing-Git "下载Git")    
+
+下载安装Git：[点击这里下载](http://git-scm.com/book/en/Getting-Started-Installing-Git "下载Git")   
+
 注：安装的时候第三步记得选中`Simple context menu(Registry based)`，才可以在右键菜单中生成`Git GUI here`和`Git Bash Here`选项，如下图所示
 ![gitinstall](/media/files/2013/12/14/gitinstall.jpg)    
 安装完成后，找个目录 `右键`\>`Git Bash Here`，打开Git的命令行工具。在里面输入`git --help`，就能看到命令的使用帮助了。    
+
 附：[Git的简易指南](http://rogerdudler.github.io/git-guide/index.zh.html "Git的简易指南")    
 
 ###三、搭建博客
@@ -63,7 +68,8 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 </html>
 {% endhighlight %}
 
-Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-for-designers)，`{{ page.title }}`表示文章标题，`{{ content }}`表示文章内容，更多模板变量请参考[官方文档](http://jekyllrb.com/docs/variables/)。    
+Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-for-designers)，`\{\{ page.title \}\}`表示文章标题，`\{\{ content \}\}`表示文章内容，更多模板变量请参考[官方文档](http://jekyllrb.com/docs/variables/)。    
+
 文件夹结构变为：   
 > /demo  
 > \ \ \ \ |--_config.yml  
@@ -75,6 +81,7 @@ Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-fo
 > $ mkdir _posts
 
 进入`_posts`文件夹，新建文本文档，名字假定为2013-12-12-hello-world.html`文件名称格式为年-月-日-标题.后缀名`，后缀名可以是`html`或者`markdown`。
+
 在该文件中，填入以下内容：
 {% highlight html %}
 ---  
@@ -111,13 +118,13 @@ title: 我的Blog
 <h2>\{\{ page.title \}\}</h2>
 <p>最新文章</p>
 <ul>
-    \{% for post in site.posts %\}
+    \{&#37; for post in site.posts &#37;\}
     <li>\{\{ post.date | date_to_string \}\} <a href="\{\{ site.baseurl \}\}\{\{ post.url \}\}">\{\{ post.title \}\}</a></li>
-    \{% endfor %\}
+    \{&#37; endfor &#37;\}
 </ul>
 {% endhighlight %}
 
-这里的\{% for post in site.posts %\}表示对所有的文章进行循环遍历，这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于`\{\{site.baseurl\}\}`就是_config.yml中设置的baseurl变量。
+这里的\{&#37; for post in site.posts &#37;\}表示对所有的文章进行循环遍历，这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于`\{\{site.baseurl\}\}`就是_config.yml中设置的baseurl变量。
 
 文件夹结构变成：
 > /demo  
@@ -141,12 +148,19 @@ title: 我的Blog
 
 ####7.绑定域名
 如果你不想用http://username.github.com/demo/这个域名，可以换成自己的域名。
+
 具体方法是在repo的根目录下面，新建一个名为CNAME的文本文件，里面写入你要绑定的域名，比如example.com或者xxx.example.com。
+
 如果绑定的是顶级域名，则DNS要新建一条A记录，指向204.232.175.78。如果绑定的是二级域名，则DNS要新建一条CNAME记录，指向username.github.com（请将username换成你的用户名）。此外，别忘了将_config.yml文件中的baseurl改成根目录"/"。
+
 至此，最简单的Blog就算搭建完成了。进一步的完善，请参考Jekyll创始人的[示例库](http://github.com/mojombo/tpw)，以及其他用Jekyll搭建的[Blog](http://github.com/jekyll/jekyll/wiki/Sites)。
+
 (完)
+
 \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+
 特别感谢：   
+
 1.[阮一峰老师](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html "阮一峰：搭建一个免费的，无限流量的Blog----github Pages和Jekyll入门")     
 
 2.[诺兰德](http://boa-d-luffy.github.io/blog/ "诺兰德")
