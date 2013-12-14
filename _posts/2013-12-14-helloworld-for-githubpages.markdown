@@ -60,7 +60,7 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>&#123;&#123; page.title &#125;&#125;</title>
+    <title>{{ page.title }}</title>
   </head>
   <body>
     &#123;&#123; content &#125;&#125;
