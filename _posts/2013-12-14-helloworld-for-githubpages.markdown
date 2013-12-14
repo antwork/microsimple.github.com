@@ -60,7 +60,7 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>{{ page.title }}</title>
+    <title>\{\{ page.title \}\}</title>
   </head>
   <body>
     &#123;&#123; content &#125;&#125;
@@ -68,7 +68,7 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 </html>
 {% endhighlight %}
 
-Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-for-designers)，`&#123;&#123; page.title &#125;&#125;`表示文章标题，`&#123;&#123; content &#125;&#125;`表示文章内容，更多模板变量请参考[官方文档](http://jekyllrb.com/docs/variables/)。    
+Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-for-designers)，&#123;&#123; page.title &#125;&#125;表示文章标题，&#123;&#123; content &#125;&#125;表示文章内容，更多模板变量请参考[官方文档](http://jekyllrb.com/docs/variables/)。    
 
 文件夹结构变为：   
 > /demo  
