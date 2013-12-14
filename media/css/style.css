@@ -1,16 +1,28 @@
 ﻿@charset "UTF-8";
+/*------------------------------------
 @import url(http://fonts.googleapis.com/css?family=Lekton);
 @import url(http://fonts.googleapis.com/css?family=Titillium+Web);
-/*------------------------------------
  * sext-vi
  *
  * @author simple@antzone.cn
- * @link http://microsimple.github.com
+ * @link http://microsimple.github.io
  * @update 2013-12-09
  *
  * |/ | (~ (~
  * |\.|._)._)
  * --------------------------------- */
+ @font-face {
+  font-family: 'Lekton';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lekton'), local('Lekton-Regular'), url(/media/fonts/Gv78TXgMRvGbTrqT_eA_TQ.woff) format('woff');
+}
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Titillium Web'), local('TitilliumWeb-Regular'), url(/media/fonts/7XUFZ5tgS-tD6QamInJTcdGU7DQ8I6RFMlK0vgclk7w.woff) format('woff');
+}
 * {
   margin: 0;
   padding: 0; }
@@ -142,7 +154,7 @@ article {
     article .meta .tags header #header h1 a, header #header h1 article .meta .tags a, article .meta .tags a {
       color: #999999;
       padding: .25em; }
-  a[href^="http//"]{
+  article .post p a[href^="http//"]{
     background:url(/media/blank.gif) top right no-repeat;
     padding-right:10px;
   }
