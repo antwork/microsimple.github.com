@@ -6,7 +6,6 @@ guid: 2013121201
 description: 最近迷上了一款文本编辑器叫Sublime Text，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。本文简单介绍了软件的安装与插件的使用以及配置文件的详细备注。
 tags:  
   - Sublime Text
-  - 配置文件
 ---
 最近迷上了一款文本编辑器叫`Sublime Text`，[官网](http://www.sublimetext.com/ "Sublime Text 官网")，给人的第一感觉是轻，而且里面的各种自定义配置用起来真的是如鱼得水。写这篇文章主要是防止以后到处寻找而做个备份。
 ###一、`Sublime Text`的下载安装
