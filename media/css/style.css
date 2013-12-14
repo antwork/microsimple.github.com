@@ -52,7 +52,7 @@ hr {
   color: #fff;
   background-color: #09f; }
 
-a, header #header h1 a, article .title a, article .meta .tags a, article .divider a, {
+a, header #header h1 a, article .title a, article .meta .tags a, article .divider a{
   text-decoration: none;
   color: #bb2222; }
   a:hover, header #header h1 a:hover, article .title a:hover, article .meta .tags a:hover, article .divider a:hover {
@@ -161,8 +161,6 @@ article {
 .post a[href^="http://"]{
     background:url(/media/blank.gif) top right no-repeat;
     padding-right:10px;
-    text-decoration: underline;
-    color:#ccc;
   }
 .post a[href^="http://"]:hover{
   color:red;
