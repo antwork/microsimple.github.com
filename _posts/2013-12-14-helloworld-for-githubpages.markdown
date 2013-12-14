@@ -48,7 +48,7 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 
 文件夹结构为：    
 > /demo    
-> \ \ \ \ |--_config.yml    
+> &nbsp;&nbsp;|--_config.yml    
 
 ####3.新建模板文件：
 在博客根目录下新建一个文件夹，名字为`_layouts`，用于存放模板文件：
@@ -60,21 +60,21 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>\{\{ page.title \}\}</title>
+    <title>&#123;&#123; page.title &#125;&#125;</title>
   </head>
   <body>
-    \{\{ content \}\}
+    &#123;&#123; content &#125;&#125;
   </body>
 </html>
 {% endhighlight %}
 
-Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-for-designers)，`\{\{ page.title \}\}`表示文章标题，`\{\{ content \}\}`表示文章内容，更多模板变量请参考[官方文档](http://jekyllrb.com/docs/variables/)。    
+Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-for-designers)，`&#123;&#123; page.title &#125;&#125;`表示文章标题，`&#123;&#123; content &#125;&#125;`表示文章内容，更多模板变量请参考[官方文档](http://jekyllrb.com/docs/variables/)。    
 
 文件夹结构变为：   
 > /demo  
-> \ \ \ \ |--_config.yml  
-> \ \ \ \ |--_layouts  
-> \ \ \ \ |\ \ \ \ |--default.html   
+> &nbsp;&nbsp;|--_config.yml  
+> &nbsp;&nbsp;|--_layouts  
+> &nbsp;&nbsp;|&nbsp;&nbsp;|--default.html   
 
 ####4.新建文章
 回到`demo`文件夹，新建一个文件夹，名字为`_posts`，用于存放博客文章：
@@ -88,25 +88,25 @@ Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-fo
 layout: default  
 title: 我的第一篇文章  
 ---  
-<h1>\{\{ page.title \}\}</h1>  
+<h1>&#123;&#123; page.title &#125;&#125;</h1>  
 <p>Hello,Jekyll!</p>  
-<p>\{\{ page.date | date_to_string \}\}</p>  
+<p>&#123;&#123; page.date | date_to_string &#125;&#125;</p>  
 {% endhighlight %}
 
 每篇文章的头部，都必须有一个[YAML文件头](http://jekyllrb.com/docs/frontmatter/)，用来设置一些元数据。以`---`标记开头和结尾，里面每一行设置一种元数据。   
 > 'layout: default' >>> 表示该文章用的模板是_layouts文件夹下的default.html文件。  
-> 'title: 我的第一篇文章' >>> 表示该文章的标题是'我的第一篇文章'。如果不设置这个值，则默认使用文件名中的标题，即'hello-world'。
+> 'title: 我的第一篇文章' >>> 表示该文章的标题是'我的第一篇文章'。如果不设置这个值，则默认使用文件名中的标题，即'hello-world'。  
 > 'page.title' >>> 就是文件头中设置的title，即'我的第一篇文章'。  
 > 'page.date' >>> 即为文件名的日期，也可以在文件头中重新设置date。  
 > 'date_to_string' >>> 表示将page.date 变量转换成人类可读的格式。   
 
 文件夹结构变为：   
 > /demo  
-> \ \ \ \ |--_config.yml  
-> \ \ \ \ |--_layouts  
-> \ \ \ \ |\ \ \ \ |--default.html  
-> \ \ \ \ |--_posts  
-> \ \ \ \ |\ \ \ \ |--2013-12-12-hello-world.html  
+> &nbsp;&nbsp;|--_config.yml  
+> &nbsp;&nbsp;|--_layouts  
+> &nbsp;&nbsp;|&nbsp;&nbsp;|--default.html  
+> &nbsp;&nbsp;|--_posts  
+> &nbsp;&nbsp;|&nbsp;&nbsp;|--2013-12-12-hello-world.html  
 
 ####5.新建首页
 回到`demo`文件夹，新建一个文件叫`index.html`并填入以下内容：   
@@ -115,25 +115,25 @@ title: 我的第一篇文章
 layout: default
 title: 我的Blog
 ---
-<h2>\{\{ page.title \}\}</h2>
+<h2>&#123;&#123; page.title &#125;&#125;</h2>
 <p>最新文章</p>
 <ul>
-    \{&#37; for post in site.posts &#37;\}
-    <li>\{\{ post.date | date_to_string \}\} <a href="\{\{ site.baseurl \}\}\{\{ post.url \}\}">\{\{ post.title \}\}</a></li>
-    \{&#37; endfor &#37;\}
+    &#123;&#37; for post in site.posts &#37;&#125;
+    <li>&#123;&#123; post.date | date_to_string &#125;&#125; <a href="&#123;&#123; site.baseurl &#125;&#125;&#123;&#123; post.url &#125;&#125;">&#123;&#123; post.title &#125;&#125;</a></li>
+    &#123;&#37; endfor &#37;&#125;
 </ul>
 {% endhighlight %}
 
-这里的\{&#37; for post in site.posts &#37;\}表示对所有的文章进行循环遍历，这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于`\{\{site.baseurl\}\}`就是_config.yml中设置的baseurl变量。
+这里的\{&#37; for post in site.posts &#37;&#125;表示对所有的文章进行循环遍历，这里要注意的是，Liquid模板语言规定，输出内容使用两层大括号，单纯的命令使用一层大括号。至于`&#123;&#123; site.baseurl &#125;&#125;`就是_config.yml中设置的baseurl变量。
 
 文件夹结构变成：
 > /demo  
-> \ \ \ \ |--_config.yml  
-> \ \ \ \ |--_layouts  
-> \ \ \ \ |\ \ \ \ |--default.html  
-> \ \ \ \ |--_posts  
-> \ \ \ \ |\ \ \ \ |--2013-12-12-hello-world.html  
-> \ \ \ \ |--index.html    
+> &nbsp;&nbsp;|--_config.yml  
+> &nbsp;&nbsp;|--_layouts  
+> &nbsp;&nbsp;|&nbsp;&nbsp;|--default.html  
+> &nbsp;&nbsp;|--_posts  
+> &nbsp;&nbsp;|&nbsp;&nbsp;|--2013-12-12-hello-world.html  
+> &nbsp;&nbsp;|--index.html    
 
 ####6.发布博客
 先将所有内容加入到本地git库`注：当前目录为demo`：
@@ -141,7 +141,7 @@ title: 我的Blog
 > $ git commit -m "first commit"  
 
 前往[Github](http://github.com)，新建一个名为`demo`的库，建好后将本地内容推送到Github上你刚刚建的demo库中`注：将下面命令中的username换成你自己的username`：
-> $ git remote add origin https://github.com/username/demo.git\ \ \ \  
+> $ git remote add origin https://github.com/username/demo.git   
 > $ git push origin gh-pages   
 
 上传成功之后，等10分钟左右，访问http://username.github.com/demo/就可以看到博客已经生成了（将username换成你的用户名）。
