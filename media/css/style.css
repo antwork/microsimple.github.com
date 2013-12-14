@@ -158,12 +158,9 @@ article {
     max-width: 680px;
     display: block;
     margin: .5em auto; }
-.post a[href^="http://"]{
+a[href^="http://"]{
     background:url(/media/blank.gif) top right no-repeat;
     padding-right:10px;
-  }
-.post a[href^="http://"]:hover{
-  color:red;
   }
   article .comment {
     margin: 3em 0; }
