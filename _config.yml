@@ -1,13 +1,13 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title.html
-name: "MicroSimple's Blog"
+name: "朴's Blog"
 time: "2013-12-09"
 markdown: rdiscount
 
 author: "MicroSimple"
-description: "记录生活中的点点滴滴,铭刻生命中的些许感动 by Simple,爱生活爱Simple"
-keywords: "一点经验,一些体验,收获心得,无言感动,MicroSimple"
+description: "记录生活中的点点滴滴,铭刻生命中的些许感动 by 朴,爱生活爱朴"
+keywords: "一点经验,一些体验,收获心得,无言感动,朴"
 disqus: "microsimple"
 mail: "yy.liu@foxmail.com"
 links: 
