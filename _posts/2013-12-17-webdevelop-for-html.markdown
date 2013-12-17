@@ -29,7 +29,7 @@ tags:
   
 下面我将分别说说以上代码代表的含义：  
 
-####&lt;!DOCTYPE html&gt;:
+####&lt;!DOCTYPE html&gt;
 定义了当前文件的文档类型和CSS(层叠样式表)规则。我们在一样的html的文档里添加了不同的&lt;!DOCTYPE&gt; 标签时会出现不同的显示效果。  
 &lt;!DOCTYPE&gt; 声明位于文档中的最前面的位置，处于 &lt;html&gt; 标签之前。此标签可告知浏览器文档使用哪种 HTML 或 XHTML 规范。    
 推荐使用上面代码展示的文档头，这是`HTML5`中的写法。  
@@ -55,8 +55,8 @@ META标签是HTML标记HEAD区的一个关键标签，它位于HTML文档的&lt;
 ####&lt;body&gt;大家好，这是我的第一个网页。&lt;/body&gt;:
 &lt;body&gt; 元素定义文档的主体(即要展现的内容)。它包含文档的所有内容（比如文本、超链接、图像、表格和列表等等）。   
 
-(完)
-==================================
+(over)
+\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 参考资料：  
 1.w3cschool：http：//www.w3school.com.cn/html  
 2.HTML &lt;!DOCTYPE&gt; 标签学习：http://blog.csdn.net/luxideyao/article/details/17027617  
