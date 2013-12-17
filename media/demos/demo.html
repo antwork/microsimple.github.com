@@ -17,7 +17,6 @@
         for(var i=0;i<params.length;i++){
             param[params[i].split("=")[0]]=unescape(params[i].split("=")[1]);
         }
-        alert(param["s"]);
         $(".result").load("files/"+param["s"]+".txt");
     });
     </script>
