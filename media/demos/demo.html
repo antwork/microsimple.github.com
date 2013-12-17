@@ -17,6 +17,7 @@
         for(var i=0;i<params.length;i++){
             param[params[i].split("=")[0]]=unescape(params[i].split("=")[1]);
         }
+        if(param === null || param === undefined) window.location="/404.html";
         $(".result").load("files/"+param["s"]+".txt");
     });
     </script>
