@@ -1,5 +1,5 @@
 ---
-title: 网页开发简单教程之HTML
+title: HTML系列教程之一：HelloWorld for HTML
 layout: post
 createdate: 2013-12-17 20:37:19
 guid: 2013121701
@@ -7,6 +7,7 @@ description: html即超文本标记语言。它是标准通用标记语言下的
 tags:  
   - HTML
 ---
+![HTML](/media/files/2013/12/17/html.jpg)
 ####什么是HTML?
 `HTML`即`超文本标记语言`,它是标准通用标记语言下的一个应用。  
 `超文本`指一个页面内可以包含图片、链接，甚至是音乐、程序等非文字元素。  
