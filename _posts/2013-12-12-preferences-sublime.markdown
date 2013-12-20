@@ -71,7 +71,9 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed
     //设置为true时，按Tab会根据前后环境进行代码自动匹配补全
     "tab_completion":true,
     //选中的文本按Ctrl+F时，自动复制到查找面板的文本框里
-    "find_selected_text":true
+    "find_selected_text":true,
+    //防止SublimeText自动检查更新
+    "update_check":false
 }
 {% endhighlight %}
 ^_^/，好了，完工，具体使用情况还是要依靠自己的喜好而来，这里的配置并不唯一，请不要在意这些细节~。
