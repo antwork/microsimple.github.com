@@ -46,6 +46,8 @@ import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed
     "line_padding_top":2,
     //tab键缩进用空格代替
     "translate_tabs_to_spaces":true,
+    //自动换行
+    "word_warp":true,
     //tab键制表符宽度
     "tab_size":4,
     //是否显示行号
