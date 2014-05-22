@@ -126,7 +126,6 @@ function generateOneNumber(){
 }
 
 $(document).keydown(function(event){
-    event.preventDefault();//阻止原本的按键默认效果
     switch(event.keyCode){
         case 37://Left
             event.preventDefault();//阻止原本的按键默认效果
