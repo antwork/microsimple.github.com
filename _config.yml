@@ -19,7 +19,7 @@ links:
     url: "http://github.com/MicroSimple"
     desc: "我的GitHub"
 
-navigations:
+navigations: 
   - title: 归档
     class: fa fa-list-ul
     href: /archive
