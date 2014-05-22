@@ -10,8 +10,7 @@ layout: page
 > 你可以在这些地方找到我：
 
 > mail: {{site.mail}}
-
-<p><wb:follow-button uid="1842336184" type="red_4" width="240" height="64" ></wb:follow-button></p>
+weibo:<a id="wb_card_alone" wb_screen_name="SinaSimple" href="#" >SinaSimple</a>
 {% for link in site.links %}
 > {{link.title}}: [{{link.name}}]({{link.url}} "{{link.desc}}")
 
