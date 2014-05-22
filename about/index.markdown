@@ -11,7 +11,7 @@ layout: page
 
 > mail: {{site.mail}}
 
-<wb:follow-button uid="1842336184" type="red_4" width="240" height="64" ></wb:follow-button>
+<p><wb:follow-button uid="1842336184" type="red_4" width="240" height="64" ></wb:follow-button></p>
 {% for link in site.links %}
 > {{link.title}}: [{{link.name}}]({{link.url}} "{{link.desc}}")
 
