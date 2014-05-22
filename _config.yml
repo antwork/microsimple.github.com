@@ -2,7 +2,6 @@ markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:day/:title.html
 name: "MicroSimple's Blog"
-time: "2013-12-09"
 markdown: rdiscount
 
 author: "MicroSimple"
