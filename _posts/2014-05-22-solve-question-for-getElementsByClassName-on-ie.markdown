@@ -7,7 +7,7 @@ description: 最近遇到一个getElementsByClassName在IE中的兼容性问题�
 tags: 
   - JavaScript
 --- 
-最近遇到一个getElementsByClassName在IE中的兼容性问题，有兼容新问题的代码如下：
+最近遇到一个getElementsByClassName在IE中的兼容性问题，有兼容性问题的代码如下：
 {% highlight js %}
 window.onload = function(){
     var checkInput = document.getElementsByClassName("check");
