@@ -9,8 +9,12 @@ layout: page
 
 > 你可以在这些地方找到我：
 
-> mail: {{site.mail}}
+> mail: {{site.mail}}  
+
+
 weibo:<a id="wb_card_alone" wb_screen_name="SinaSimple" href="#" >SinaSimple</a>
+
+
 {% for link in site.links %}
 > {{link.title}}: [{{link.name}}]({{link.url}} "{{link.desc}}")
 
