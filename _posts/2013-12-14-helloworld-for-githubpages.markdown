@@ -55,7 +55,7 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 > $ mkdir _layouts
 
 进入`_layouts`文件夹，并新建一个`default.html`文件，作为博客的默认模板。并写入以下内容(由于Markdown的语法原因，复制的时候请去掉引用内容中的`\`)： 
-{% highlight html %}
+{% highlight ruby %}
 <!doctype html>
 <html>
   <head>
@@ -83,7 +83,7 @@ Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-fo
 进入`_posts`文件夹，新建文本文档，名字假定为2013-12-12-hello-world.html`文件名称格式为年-月-日-标题.后缀名`，后缀名可以是`html`或者`markdown`。
 
 在该文件中，填入以下内容(由于Markdown的语法原因，复制的时候请去掉引用内容中的`\`)：   
-{% highlight html %}
+{% highlight ruby %}
 ---  
 layout: default  
 title: 我的第一篇文章  
@@ -110,7 +110,7 @@ title: 我的第一篇文章
 
 ####5.新建首页
 回到`demo`文件夹，新建一个文件叫`index.html`并填入以下内容(由于Markdown的语法原因，复制的时候请去掉引用内容中的`\`)： 
-{% highlight html %}
+{% highlight ruby %}
 ---
 layout: default
 title: 我的Blog
