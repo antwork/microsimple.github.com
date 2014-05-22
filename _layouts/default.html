@@ -51,7 +51,7 @@
         <footer>
           <div>
             {% assign first_post = site.posts | last %}
-            &copy; {{ first_post.date | date: "%Y" }} ~ {{ site.createdate | date: "%Y" }} {{ site.author }} | Powered By Jekyll | fork <a href="{{ site.links[1].url }}" title="fork me">me</a>
+            &copy; {{ first_post.date | date: "%Y" }} ~ {{ last_post.date | date: "%Y" }} {{ site.author }} | Powered By Jekyll | fork <a href="{{ site.links[1].url }}" title="fork me">me</a>
           </div>
         </footer>
       </div> 
