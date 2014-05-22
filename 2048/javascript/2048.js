@@ -7,6 +7,7 @@
  */
 var board = new Array(),
     score = 0,
+    hscore = 0,
     hasConflicted = new Array(),
     //捕捉触摸位置
     startX = 0,
@@ -15,6 +16,11 @@ var board = new Array(),
     endY = 0;
 
 $(document).ready(function(){
+    if(window.localStorage){
+        hscore = localStorage.getItem("highscore") == null ? 0 : localStorage.getItem("highscore");
+    }else{
+        hscore = getCookie("highscore")==null?0:getCookie("highscore");
+    }
     prepareForMobile();
     newGame();
 });
@@ -217,7 +223,12 @@ function isGameOver(){
    }
 }
 function gameOver(){
-    alert("Game Over!");
+    if(window.localStorage){
+        localStorage.setItem("highscore",hscore);
+    }else{
+        SetCookie("highscore",hscore);
+    }
+    showTips("革命尚未成功<br/>同志仍需努力");
 }
 function moveLeft(){
     if(!canMoveLeft(board))return false;
@@ -443,6 +454,47 @@ function noMove(){
     return true;
 }
 
+function SetCookie(name,value)//两个参数，一个是cookie的名字，一个是值
+
+{
+
+    var Days = 30; //此 cookie 将被保存 30 天
+
+    var exp = new Date();    //new Date("December 31, 9998");
+
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+
+}
+
+function getCookie(name)//取cookies函数        
+
+{
+
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+
+     if(arr != null) return unescape(arr[2]); return null;
+
+ 
+
+}
+
+function delCookie(name)//删除cookie
+
+{
+
+    var exp = new Date();
+
+    exp.setTime(exp.getTime() - 1);
+
+    var cval=getCookie(name);
+
+    if(cval!=null) document.cookie= name + "="+cval+";expires="+exp.toGMTString();
+
+}
+
+
 /**
  * showAnimation.js
  */
@@ -470,4 +522,35 @@ function showMoveAnimation(fromX,fromY,toX,toY){
 }
 function updateScore(score){
     $("#score").text(score);
+    if(score>hscore) hscore=score;
+    $("#hscore").text(hscore)
+}
+function showTips(text){
+    
+    var sHeight = document.body.scrollHeight,
+        sWidth = document.body.scrollWidth,
+        cHeight = document.body.clientHeight;
+    var mask = document.createElement("div");
+        mask.id="mask"; 
+        mask.style.height = sHeight +"px";
+        mask.style.width = sWidth+"px";
+        document.body.appendChild(mask);
+    var tips = document.createElement("div");
+        tips.id = "tips";
+        document.body.appendChild(tips);
+        
+        tips.style.top = cHeight/2 - tips.offsetHeight/2 + "px";
+        tips.style.left = sWidth/2 - tips.offsetWidth/2 + "px";
+        tips.innerHTML = text;
+        
+        mask.onclick=function(){
+            document.body.removeChild(mask);
+            document.body.removeChild(tips);
+        };
+    setTimeout(function(){
+        document.body.removeChild(mask);
+        document.body.removeChild(tips);
+    },1500);
+    
+    
 }
