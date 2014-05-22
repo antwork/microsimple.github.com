@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <html xmlns:wb="http://open.weibo.com/wb">
+  <html>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta property="wb:webmaster" content="4513019856d2091e" />
     <meta http-equiv="Expires" content="0" />
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/media/css/default.css">
     <link rel="stylesheet" href="/media/css/fontawesome.css">
     <link rel="stylesheet" href="/media/css/syntax.css">
-    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
     <!--[if lt IE 9]>
     <script type="text/javascript" src="/media/js/html5.js"></script>
     <![endif]-->
@@ -31,11 +30,6 @@
       $(document).bind('DOMNodeInserted', function(event) {
               addBlankTargetForLinks();
       });
-      WB2.anyWhere(function(W){
-        W.widget.hoverCard({
-            id : "wb_card_alone"
-        });
-    });
     </script>
   </head>
   <body>
