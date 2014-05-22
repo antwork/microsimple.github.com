@@ -42,6 +42,6 @@ layout: default
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </li>
   {% endfor %}
-    <li class="listing-seperator"><a href="/archive.html">以前的一些文章...</a></li>
+    <li class="listing-seperator"><a href="/archive">更早的文章...</a></li>
   </ul>
 </div>
