@@ -60,10 +60,10 @@ Git是一个开源的分布式版本控制系统，用以有效、高速的处�
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <title>\{\{ page.title \}\}</title>
+    <title>{{ page.title }}</title>
   </head>
   <body>
-    \{\{ content \}\}
+    {{ content }}
   </body>
 </html>
 {% endhighlight %}
@@ -88,9 +88,9 @@ Jekyll使用[Liquid模板语言](http://github.com/shopify/liquid/wiki/liquid-fo
 layout: default  
 title: 我的第一篇文章  
 ---  
-<h1>\{\{ page.title \}\}</h1>  
+<h1>{{ page.title }}</h1>  
 <p>Hello,Jekyll!</p>  
-<p>\{\{ page.date | date_to_string \}\}</p>  
+<p>{{ page.date | date_to_string }}</p>  
 {% endhighlight %}
 
 每篇文章的头部，都必须有一个[YAML文件头](http://jekyllrb.com/docs/frontmatter/)，用来设置一些元数据。以`---`标记开头和结尾，里面每一行设置一种元数据。   
@@ -115,12 +115,12 @@ title: 我的第一篇文章
 layout: default
 title: 我的Blog
 ---
-<h2>\{\{ page.title \}\}</h2>
+<h2>{{ page.title }}</h2>
 <p>最新文章</p>
 <ul>
-    \{\% for post in site.posts \%\};
-    <li>\{\{ post.date | date_to_string \}\} <a href="\{\{ post.url \}\}">\{\{ post.title \}\}</a></li>
-    \{\% endfor \%\};
+    {% for post in site.posts %};
+    <li>{{ post.date | date_to_string }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %};
 </ul>
 {% endhighlight %}
 
