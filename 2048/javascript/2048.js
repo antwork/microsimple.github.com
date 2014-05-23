@@ -7,7 +7,7 @@
  */
 var board = new Array(),
     score = 0,
-    hscore = 0,
+    bast = 0,
     hasConflicted = new Array(),
     //捕捉触摸位置
     startX = 0,
@@ -17,9 +17,9 @@ var board = new Array(),
 
 $(document).ready(function () {
     if (window.localStorage) {
-        hscore = localStorage.getItem("highscore") == null ? 0 : localStorage.getItem("highscore");
+        bast = localStorage.getItem("bast") == null ? 0 : localStorage.getItem("bast");
     } else {
-        hscore = getCookie("highscore") == null ? 0 : getCookie("highscore");
+        bast = getCookie("bast") == null ? 0 : getCookie("bast");
     }
     prepareForMobile();
     newGame();
@@ -257,9 +257,9 @@ function isGameOver() {
 
 function gameOver() {
     if (window.localStorage) {
-        localStorage.setItem("highscore", hscore);
+        localStorage.setItem("bast", bast);
     } else {
-        SetCookie("highscore", hscore);
+        setCookie("bast", bast);
     }
     showTips("革命尚未成功<br/>同志仍需努力");
 }
@@ -524,7 +524,7 @@ function noMove() {
     return true;
 }
 
-function SetCookie(name, value) //两个参数，一个是cookie的名字，一个是值
+function setCookie(name, value) //两个参数，一个是cookie的名字，一个是值
 
 {
 
@@ -595,8 +595,8 @@ function showMoveAnimation(fromX, fromY, toX, toY) {
 
 function updateScore(score) {
     $("#score").text(score);
-    if (score > hscore) hscore = score;
-    $("#hscore").text(hscore)
+    if (score > bast) bast = score;
+    $("#bast").text(bast)
 }
 
 function showTips(text) {
