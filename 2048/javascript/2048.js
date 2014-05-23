@@ -174,7 +174,7 @@ function updateBoardView() {
             hasConflicted[i][j] = false;
         }
     $('.number-cell').css('line-height', cellSideLength + 'px');
-    $('.number-cell').css('font-size', 0.6 * cellSideLength + 'px');
+    $('.number-cell').css('font-size', 0.4 * cellSideLength + 'px');
     updateScore(score);
 }
 
