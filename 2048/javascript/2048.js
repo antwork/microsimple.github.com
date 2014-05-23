@@ -284,7 +284,7 @@ function moveLeft() {
                         board[i][k] *= 2;
                         board[i][j] = 0;
                         score += board[i][k];
-                        hasConflicted[i][k] == true;
+                        hasConflicted[i][k] = true;
                         continue;
                     }
                 }
@@ -314,7 +314,7 @@ function moveRight() {
                         board[i][k] *= 2;
                         board[i][j] = 0;
                         score += board[i][k];
-                        hasConflicted[i][k] == true;
+                        hasConflicted[i][k] = true;
                         continue;
                     }
                 }
@@ -343,7 +343,7 @@ function moveUp() {
                         board[k][j] *= 2;
                         board[i][j] = 0;
                         score += board[k][j];
-                        hasConflicted[k][j] == true;
+                        hasConflicted[k][j] = true;
                         continue;
                     }
                 }
@@ -372,7 +372,7 @@ function moveDown() {
                         board[k][j] *= 2;
                         board[i][j] = 0;
                         score += board[k][j];
-                        hasConflicted[k][j] == true;
+                        hasConflicted[k][j] = true;
                         continue;
                     }
                 }
