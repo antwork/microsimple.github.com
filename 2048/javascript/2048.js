@@ -23,11 +23,11 @@ $(document).ready(function () {
     }
     prepareForMobile();
     newGame();
-    
-    if(navigator.appName == "Microsoft Internet Explorer"){
+
+    if (navigator.appName == "Microsoft Internet Explorer") {
         var version = navigator.appVersion,
-            ms = parseInt(version.substr(version.indexOf("MSIE ")+5,3));
-        if(ms<9){
+            ms = parseInt(version.substr(version.indexOf("MSIE ") + 5, 3));
+        if (ms < 9) {
             window.attachEvent('touchstart', function (event) {
                 startX = event.touches[0].pageX;
                 startY = event.touches[0].pageY;
@@ -36,54 +36,11 @@ $(document).ready(function () {
                 event.preventDefault();
             });
             document.attachEvent('touchend', function (event) {
-                //changedTouches 触摸状态改变
-                endX = event.changedTouches[0].pageX;
-                endY = event.changedTouches[0].pageY;
-                /***
-                 * 屏幕中Y轴向下是正方向
-                 */
-                var deltaX = endX - startX,
-                    deltaY = endY - startY;
 
-                if (Math.abs(deltaX) < 0.3 * documentWidth && Math.abs(deltaY) < 0.3 * documentWidth)
-                    return;
-                //X
-                if (Math.abs(deltaX) >= Math.abs(deltaY)) {
-                    if (deltaX > 0) {
-                        //moveRight
-                        if (moveRight()) {
-                            setTimeout("generateOneNumber()", 210);
-                            setTimeout("isGameOver()", 300);
-                        }
-                    } else {
-                        //moveLeft
-                        if (moveLeft()) {
-                            setTimeout("generateOneNumber()", 210);
-                            setTimeout("isGameOver()", 300);
-                        }
-                    }
-                }
-                //Y
-                else {
-                    if (deltaY > 0) {
-                        //moveDown
-                        if (moveDown()) {
-                            setTimeout("generateOneNumber()", 210);
-                            setTimeout("isGameOver()", 300);
-                        }
-                    } else {
-                        //moveUp
-                        if (moveUp()) {
-                            setTimeout("generateOneNumber()", 210);
-                            setTimeout("isGameOver()", 300);
-                        }
-
-                    }
-                }
-
+                touched(event);
             });
         }
-    }else{
+    } else {
         /**
          * 触摸事件监听
          */
@@ -96,55 +53,59 @@ $(document).ready(function () {
             event.preventDefault();
         });
         document.addEventListener('touchend', function (event) {
-            //changedTouches 触摸状态改变
-            endX = event.changedTouches[0].pageX;
-            endY = event.changedTouches[0].pageY;
-            /***
-             * 屏幕中Y轴向下是正方向
-             */
-            var deltaX = endX - startX,
-                deltaY = endY - startY;
-
-            if (Math.abs(deltaX) < 0.3 * documentWidth && Math.abs(deltaY) < 0.3 * documentWidth)
-                return;
-            //X
-            if (Math.abs(deltaX) >= Math.abs(deltaY)) {
-                if (deltaX > 0) {
-                    //moveRight
-                    if (moveRight()) {
-                        setTimeout("generateOneNumber()", 210);
-                        setTimeout("isGameOver()", 300);
-                    }
-                } else {
-                    //moveLeft
-                    if (moveLeft()) {
-                        setTimeout("generateOneNumber()", 210);
-                        setTimeout("isGameOver()", 300);
-                    }
-                }
-            }
-            //Y
-            else {
-                if (deltaY > 0) {
-                    //moveDown
-                    if (moveDown()) {
-                        setTimeout("generateOneNumber()", 210);
-                        setTimeout("isGameOver()", 300);
-                    }
-                } else {
-                    //moveUp
-                    if (moveUp()) {
-                        setTimeout("generateOneNumber()", 210);
-                        setTimeout("isGameOver()", 300);
-                    }
-
-                }
-            }
+            touched(event);
 
         });
 
     }
 });
+
+function touched(event) {
+    //changedTouches 触摸状态改变
+    endX = event.changedTouches[0].pageX;
+    endY = event.changedTouches[0].pageY;
+    /***
+     * 屏幕中Y轴向下是正方向
+     */
+    var deltaX = endX - startX,
+        deltaY = endY - startY;
+
+    if (Math.abs(deltaX) < 0.3 * documentWidth && Math.abs(deltaY) < 0.3 * documentWidth)
+        return;
+    //X
+    if (Math.abs(deltaX) >= Math.abs(deltaY)) {
+        if (deltaX > 0) {
+            //moveRight
+            if (moveRight()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isGameOver()", 300);
+            }
+        } else {
+            //moveLeft
+            if (moveLeft()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isGameOver()", 300);
+            }
+        }
+    }
+    //Y
+    else {
+        if (deltaY > 0) {
+            //moveDown
+            if (moveDown()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isGameOver()", 300);
+            }
+        } else {
+            //moveUp
+            if (moveUp()) {
+                setTimeout("generateOneNumber()", 210);
+                setTimeout("isGameOver()", 300);
+            }
+
+        }
+    }
+}
 
 function prepareForMobile() {
     if (documentWidth > 500) {
@@ -242,6 +203,9 @@ function generateOneNumber() {
 
     //随机一个数字
     var randNumber = Math.random() < 0.5 ? 2 : 4;
+
+    randNumber = parseInt(score) > 1024 ? 2 : randNumber;
+
     //在随机位置显示随机数字
     board[randX][randY] = randNumber;
 
