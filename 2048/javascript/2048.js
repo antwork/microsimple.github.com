@@ -331,13 +331,13 @@ function moveUp() {
         for (var i = 1; i < 4; i++) {
             if (board[i][j] != 0) {
                 for (var k = 0; k < i; k++) {
-                    if (board[k][j] == 0 && noBlockVertical(j, i, k, board)) {
+                    if (board[k][j] == 0 && noBlockVertical(j, k, i, board)) {
                         //move
                         showMoveAnimation(i, j, k, j);
                         board[k][j] = board[i][j];
                         board[i][j] = 0;
                         continue;
-                    } else if (board[k][j] == board[i][j] && noBlockVertical(j, i, k, board) && !hasConflicted[k][j]) {
+                    } else if (board[k][j] == board[i][j] && noBlockVertical(j, k, i, board) && !hasConflicted[k][j]) {
                         //move
                         showMoveAnimation(i, j, k, j);
                         board[k][j] *= 2;
